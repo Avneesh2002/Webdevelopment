@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    height: 100vh;
+     position: relative;
+     animation: bgMove 3.5s ease-in-out forwards;
+    background: url(https://th.bing.com/th?q=Deep+Outer+Space&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247);
+}   
+.rocket{
+    border: 2px solid black;
+    width: 250px;
+    bottom: 100px;
+    left: 500px;
+    height: 250px;
+    position: absolute;
+    transform: rotateZ(130deg);
+    animation: rocketMove 2s ease-in-out infinite , rocketRotate 4s ease-in-out 7.5s forwards;
+
+
+}
+.cody{
+    border: 1px solid black;
+    bottom: 100px;
+    height: 300px;
+    left: -200px;
+    position: absolute;
+    animation: rocketMove 2s ease-in-out infinite , codyMoveForward 2s ease-in-out 3.5s forwards , codyInRocket 3s ease-in-out 5.5s forwards;
+
+    
+
+
+}
+.rocket img , .cody img{
+    width: 100px;
+}
+@keyframes bgmove{
+    100%{
+        background-position: 9800% 0;
+    }
+}
+@keyframes rocketMove{
+    0%{
+        bottom: 150px;
+    }
+    50%{
+        bottom: 250px;
+    }
+    100%{
+        bottom: 150px;
+    }
+}
+@keyframes codyMoveForward{
+    100%{
+        left: 380px;
+    }
+}
+
+@keyframes codyInRocket{
+    100%{
+        transform: scale(0);
+        left: 650px;
+    }
+}
+@keyframes rocketRotate{
+    50%{
+        bottom: 150px;
+        transform: rotate(-45deg);
+
+    }
+    100%{
+        transform: rotate(-45deg);
+        bottom: 1000px;
+    }
+}
+
